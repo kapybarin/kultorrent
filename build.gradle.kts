@@ -3,8 +3,11 @@ plugins {
     application
 }
 
+description = "Torrent client written in Kotlin"
 group = "ru.kapybarin"
 version = "1.0-SNAPSHOT"
+
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -19,9 +22,10 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(17)
 }
 
+
 application {
-    mainClass.set("MainKt")
+    mainClass.set("ru.kapybarin.kultorrent.MainKt")
 }
