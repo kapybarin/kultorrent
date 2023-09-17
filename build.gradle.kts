@@ -5,7 +5,7 @@ plugins {
 
 description = "Torrent client written in Kotlin"
 group = "ru.kapybarin"
-version = "1.0-SNAPSHOT"
+version = "1.0.1-SNAPSHOT"
 
 java.sourceCompatibility = JavaVersion.VERSION_17
 
@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("com.github.ajalt.clikt:clikt:4.2.0")
 }
 
 tasks.test {

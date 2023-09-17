@@ -1,10 +1,8 @@
 package ru.kapybarin.kultorrent
 
-fun main(args: Array<String>) {
-    println("Hello, world!")
-    println("args:")
-    for (i in args.indices) {
-        print("arg[${i}]=${args.get(i)}")
-    }
+import com.github.ajalt.clikt.core.subcommands
+import ru.kapybarin.kultorrent.commands.*
 
+fun main(args: Array<String>) {
+    Main().subcommands(Info(), Download(), Create(), Edit()).main(args)
 }
